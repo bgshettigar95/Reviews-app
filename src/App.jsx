@@ -1,4 +1,14 @@
+import { useState } from "react";
+import data from "./data";
+import Reviews from "./components/Reviews";
+import { FaBeer } from "react-icons/fa";
+
 const App = () => {
-  return <h2>Reviews Starter</h2>;
+  const [reviews, setReviews] = useState(data);
+  return (
+    <main>
+      <Reviews reviews={reviews} />
+    </main>
+  );
 };
 export default App;
